@@ -1,4 +1,4 @@
-//Heart count
+
 
 function addHeartCount() {
     let count = document.getElementById('HeartId')
@@ -13,13 +13,11 @@ function ReduceStar(target) {
     let starCount = document.getElementById('star')
     let starCountInt = parseInt(starCount.innerText)
     let Service = target.closest(".card");
-    console.log(Service)
+    
    let title=Service.querySelector("h1").innerText;
    let serviceName=Service.querySelector("h2").innerText;
    let number=Service.querySelector("p").innerText;
-   console.log(title,serviceName,number)
-    // console.log(Service.children)
-
+  
     if (starCountInt >= 20) {
         starCount.innerText = starCountInt - 20;
 
@@ -65,9 +63,9 @@ for (const heart of heartCount) {
     })
 }
 
-//Call Section
+
 let callHis = document.querySelectorAll('.callHistory')
-console.log(callHis)
+
 
 for (let call of callHis) {
 
@@ -76,12 +74,12 @@ for (let call of callHis) {
         e.preventDefault();
      
         ReduceStar(e.target)
-        console.log(e.target)
+        
     })
 
 }
 
-//clear History
+
 
 document.getElementById('clear-History').addEventListener('click', function () {
 
@@ -90,7 +88,7 @@ document.getElementById('clear-History').addEventListener('click', function () {
     ClearHistory.innerHTML = "";
 })
 
-//copy section
+
 
 
 let copies = document.getElementsByClassName('copy-btn');
@@ -104,9 +102,9 @@ for (let copy of copies) {
         copyCount.innerText = copyCountInt + 1;
     
        let card=copy.closest('.card');
-       console.log(card)
+      
        const textItem=card.querySelector(".copy-num") 
-       console.log(textItem)
+      
        const text=textItem.innerText;
 
        try {
@@ -131,12 +129,3 @@ for (let copy of copies) {
 
 }
 
-//Copy paste section
-
-// let copyItem=document.getElementsByClassName('copy-btn')
-// console.log(copyItem,'hello')
-
-// for (const copy of copyItem) {
-
-    
-// }
